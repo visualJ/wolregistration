@@ -1,0 +1,15 @@
+
+plugin.tx_wolregistration_wolview {
+	view {
+		# cat=plugin.tx_wolregistration_wolview/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:wolregistration/Resources/Private/Templates/
+		# cat=plugin.tx_wolregistration_wolview/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:wolregistration/Resources/Private/Partials/
+		# cat=plugin.tx_wolregistration_wolview/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:wolregistration/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_wolregistration_wolview//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

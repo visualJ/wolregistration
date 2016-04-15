@@ -1,0 +1,48 @@
+<f:layout name="Default"/>
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+    <h1>User details</h1>
+
+    <f:flashMessages renderMode="div"/>
+    <f:render partial="User/Properties" arguments="{user:user}"/>
+    <br/>
+    <h2>Registered devices</h2>
+    <f:if condition="{user.devices}">
+        <f:then>
+            <table>
+                <thead>
+                <tr>
+                    <th>MAC Address</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <f:for each="{user.devices}" as="device">
+                    <tr>
+                        <td>{device.macAddress}</td>
+                        <td>
+                            <f:link.action action="removeDevice" arguments="{device:device}">remove</f:link.action>
+                        </td>
+                    </tr>
+                </f:for>
+            </table>
+        </f:then>
+        <f:else>
+            No devices registered yet!<br/>
+        </f:else>
+    </f:if>
+    <f:link.action action="addDevice" arguments="{user:user}">Add device</f:link.action>
+    <br/>
+    <br/>
+    <f:link.action action="logout">Log out</f:link.action>
+</f:section>

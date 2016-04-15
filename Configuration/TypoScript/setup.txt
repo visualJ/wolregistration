@@ -1,0 +1,45 @@
+
+plugin.tx_wolregistration_wolview {
+	view {
+		templateRootPath = {$plugin.tx_wolregistration_wolview.view.templateRootPath}
+		partialRootPath = {$plugin.tx_wolregistration_wolview.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_wolregistration_wolview.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_wolregistration_wolview.persistence.storagePid}
+	}
+}
+
+plugin.tx_wolregistration._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-wolregistration table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-wolregistration table th {
+		font-weight:bold;
+	}
+
+	.tx-wolregistration table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

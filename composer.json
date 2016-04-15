@@ -1,0 +1,17 @@
+{
+    "name": "benedikt.ringlein/wolregistration",
+    "type": "typo3-cms-extension",
+    "authors": [
+        {
+            "name": "benedikt.ringlein",
+            "email": "benedikt.ringlein@aoe.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "adldap/adldap": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
